@@ -13,6 +13,7 @@ a {
   font-size: 3em;
   font-weight: 800;
   font-family: "Urbanist", sans-serif;
+  text-align: center;
 }
 .highlight-1 {
   color: #606edf;
@@ -41,4 +42,33 @@ a {
 }
 .font-size-6 {
   font-size: 1.15rem;
+}
+
+.profile-photo-section {
+  float: left;
+  max-width: 20%;
+  margin: 0 10px;
+}
+#profile-photo {
+  max-width: 80%;
+  padding: 5%;
+  background-color: #666c6c;
+}
+
+.about-me {
+  height: 350px;
+}
+
+.about-me-text {
+  float: right;
+  max-width: 70%;
+  margin: 0 10px;
+}
+
+ul {
+  list-style: square;
+}
+
+.skills-list > li:nth-child(2n) {
+  background-color: #bfdf55;
 }
