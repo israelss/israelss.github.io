@@ -1,7 +1,12 @@
 ---
-layout: page
+layout: project
 title: Simple Web Worker
 categories: highlight
+project_url: https://github.com/israelss/simple-web-worker
+# featured_on: Shows articles where this project featured on
+# usage: <Name to display>|<URL>
+# example: Blog|israelss.github.io/blog
+featured_on: DigitalOcean|https://www.digitalocean.com/community/tutorials/vuejs-vue-workers
 ---
 
 > An utility to simplify the use of web workers

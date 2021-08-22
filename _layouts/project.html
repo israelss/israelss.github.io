@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+
+    <div class="project-meta">
+      {%- if page.project_url -%}
+      <div class="post-meta">
+        <a target="_blank" href="{{ page.project_url }}"
+          ><svg class="svg-icon">
+            <use
+              xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"
+            ></use>
+          </svg>
+          <span class="username">Ver no GitHub</span></a
+        >
+      </div>
+      <div class="project-featured-list">
+        {% assign featured_list = page.featured_on | split: " " %} {%- if
+        featured_list.size > 0 -%}
+        <div class="featured-meta post-meta">Artigos:</div>
+        <div class="featured-list">
+          {%- for site in featured_list -%} {% assign site_name = site | split:
+          "|" | first %} {% assign site_url = site | split: "|" | last %}
+          <div class="post-meta">
+            <a target="_blank" href="{{ site_url }}">{{ site_name }}</a>
+          </div>
+          {%- endfor -%}
+        </div>
+        {%- endif -%}
+      </div>
+      {%- endif -%}
+    </div>
+  </header>
+  <div class="post-content">{{ content }}</div>
+</article>

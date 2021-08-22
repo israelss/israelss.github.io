@@ -275,3 +275,34 @@
     }
   }
 }
+
+.project-meta {
+  display: flex;
+  @include media-query($on-laptop) {
+    display: block;
+  }
+}
+
+.project-meta > .post-meta {
+  // width: 30%;
+  // @include media-query($on-laptop) {
+  //   width: 100%;
+  // }
+  flex-grow: 1;
+}
+
+.project-featured-list {
+  display: flex;
+  @include media-query($on-laptop) {
+    display: block;
+  }
+  flex-grow: 10;
+}
+
+.featured-meta {
+  flex-grow: 1;
+}
+
+.featured-list {
+  flex-grow: 20;
+}
