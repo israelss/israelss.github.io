@@ -19,7 +19,7 @@ layout: default
         {%- for project in highlighted-projects  -%}
           <li>
             <h3>
-              <a class="post-link" href="{{ post.url | relative_url }}">
+              <a class="post-link" href="{{ project.url | relative_url }}">
                 {{ project.title | escape }}
               </a>
             </h3>
