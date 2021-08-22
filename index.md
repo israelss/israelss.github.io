@@ -2,7 +2,8 @@
 layout: home
 title: Bem-vindo ao meu site!
 permalink: /
-list_title: Últimas postagens
+list_title_posts: Últimas postagens
+list_title_projects: Projetos em destaque
 ---
 
 Este é um espaço que eu uso para apresentar meus projetos, os trabalhos que já realizei e também escrever sobre a Vida, o Universo e tudo mais!

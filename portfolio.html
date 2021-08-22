@@ -1,0 +1,25 @@
+---
+layout: page
+title: Portfolio
+permalink: /portfolio/
+list_title: Projetos e trabalhos já realizados
+---
+
+Aqui você encontra meus principais trabalhos e projetos.
+<hr />
+{%- if site.projects.size > 0 -%}
+<h2 class="post-list-heading">{{ page.list_title | default: "Projects" }}</h2>
+<ul class="post-list">
+  {%- for project in site.projects -%}
+  <li>
+    <h3>
+      <a class="post-link" href="{{ project.url | relative_url }}">
+        {{ project.title | escape }}
+      </a>
+    </h3>
+  </li>
+  {%- unless post == site.projects.last -%}
+  <hr />
+  {%- endunless -%} {%- endfor -%}
+</ul>
+{%- endif -%}

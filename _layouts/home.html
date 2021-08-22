@@ -9,30 +9,53 @@ layout: default
 
   {{ content }}
 
-  {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-    <ul class="post-list">
-      {%- for post in site.posts limit: 3 -%}
-      <li>
-        <span class="post-meta">
-          {{ post.date | date: "%-d" }} de
-          {% assign m = post.date | date: "%-m" | minus: 1 %} {{ site.months[m] }}
-          de {{ post.date | date: "%Y" }}
-        </span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
-
-    <p class="rss-subscribe">assine <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-  {%- endif -%}
+  <section class="home-highlights">
+    <div class="home-highlight-projects">
+      {%- assign highlighted-projects = site.projects| where:"categories", "highlight" -%}
+      {%- if highlighted-projects.size > 0 -%}
+        <h2 class="post-list-heading">{{ page.list_title_projects | default: "Projects" }}</h2>
+        <ul class="post-list">
+          
+        {%- for project in highlighted-projects  -%}
+          <li>
+            <h3>
+              <a class="post-link" href="{{ post.url | relative_url }}">
+                {{ project.title | escape }}
+              </a>
+            </h3>
+              {{ project.excerpt }}
+          </li>
+          {%- endfor -%}
+        </ul>
+      {%- endif -%}
+    </div>
+    <div class="home-highlight-posts">
+      {%- if site.posts.size > 0 -%}
+        <h2 class="post-list-heading">{{ page.list_title_posts | default: "Posts" }}</h2>
+        <ul class="post-list">
+          {%- for post in site.posts limit: 3 -%}
+          <li>
+            <span class="post-meta">
+              {{ post.date | date: "%-d" }} de
+              {% assign m = post.date | date: "%-m" | minus: 1 %} {{ site.months[m] }}
+              de {{ post.date | date: "%Y" }}
+            </span>
+            <h3>
+              <a class="post-link" href="{{ post.url | relative_url }}">
+                {{ post.title | escape }}
+              </a>
+            </h3>
+            {%- if site.show_excerpts -%}
+              {{ post.excerpt }}
+            {%- endif -%}
+          </li>
+          {%- endfor -%}
+        </ul>
+        <p class="rss-subscribe">assine <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+      {%- endif -%}
+    </div>
+    
+  </section>
 
 </div>
  

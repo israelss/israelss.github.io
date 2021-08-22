@@ -187,6 +187,23 @@
   margin-bottom: $spacing-unit;
 }
 
+.home-highlights {
+  display: flex;
+  justify-content: space-between;
+
+  @include media-query($on-laptop) {
+    display: block;
+  }
+}
+
+.home-highlight-posts,
+.home-highlight-projects {
+  width: 45%;
+  @include media-query($on-laptop) {
+    width: 100%;
+  }
+}
+
 // .page-heading {
 //   @include relative-font-size(2);
 // }

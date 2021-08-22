@@ -28,15 +28,17 @@ url: "https://www.israelss.github.io" # the base hostname & protocol for your si
 linkedin_username: israelss
 github_username: israelss
 
+collections:
+  posts:
+    permalink: /blog/:year/:month/:day/:title
+  projects:
+    output: true
+    permalink: /:collection/:title
+
 header_pages:
-  - portfolio.md
+  - portfolio.html
   - blog.html
   - about.md
-
-# Minima date format
-# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
-minima:
-  date_format: "%d de %B de %Y"
 
 months:
   - Janeiro
