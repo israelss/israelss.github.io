@@ -2,6 +2,8 @@
 layout: project
 title: Simple Web Worker
 categories: highlight
+# project_repo: used by utterances comments
+project_repo: israelss/simple-web-worker
 project_url: https://github.com/israelss/simple-web-worker
 # featured_on: Shows articles where this project featured on
 # usage: <Name to display>|<URL>
