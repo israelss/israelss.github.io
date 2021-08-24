@@ -5,7 +5,8 @@ categories: highlight
 # project_repo: used by utterances comments
 project_repo: israelss/simple-web-worker
 # featured_on: Shows articles where this project featured on
-# usage: <Name to display>|<URL>
+# usage: <Name to display 1>|<URL 1> <Name to display 2>|<URL 2> ... <Name to display n>|<URL n>
+# always separated by spaces
 # example: Blog|israelss.github.io/blog
 featured_on: DigitalOcean|https://www.digitalocean.com/community/tutorials/vuejs-vue-workers
 ---
