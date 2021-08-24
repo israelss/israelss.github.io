@@ -20,9 +20,9 @@ layout: default
           <span class="username">{{ page.project_repo | escape }}</span></a
         >
       </div>
+      {%- endif -%} {% assign featured_list = page.featured_on | split: " " %}
+      {%- if featured_list.size > 0 -%}
       <div class="project-featured-list">
-        {% assign featured_list = page.featured_on | split: " " %} {%- if
-        featured_list.size > 0 -%}
         <div class="featured-meta post-meta">Artigos:</div>
         <div class="featured-list">
           {%- for site in featured_list -%} {% assign site_name = site | split:
@@ -32,7 +32,6 @@ layout: default
           </div>
           {%- endfor -%}
         </div>
-        {%- endif -%}
       </div>
       {%- endif -%}
     </div>
