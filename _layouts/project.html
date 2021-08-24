@@ -7,15 +7,17 @@ layout: default
     <h1 class="post-title">{{ page.title | escape }}</h1>
 
     <div class="project-meta">
-      {%- if page.project_url -%}
+      {%- if page.project_repo -%}
       <div class="post-meta">
-        <a target="_blank" href="{{ page.project_url }}"
+        <a
+          target="_blank"
+          href="https://github.com/{{ page.project_repo| escape }}"
           ><svg class="svg-icon">
             <use
               xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"
             ></use>
           </svg>
-          <span class="username">Ver no GitHub</span></a
+          <span class="username">{{ page.project_repo | escape }}</span></a
         >
       </div>
       <div class="project-featured-list">
