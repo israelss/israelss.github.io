@@ -32,32 +32,32 @@ Agora, criamos um arquivo chamado `teste.txt` e adicionamos algum conteúdo ao m
 echo "Uma frase qualquer" > teste.txt
 ```
 
-![Teste.txt](/assets/images/blog/teste.txt1.png){: .center-image}
+![Teste.txt](/assets/images/blog/teste.txt1.png)
 
 Já temos uma modificação, então vamos adicioná-la e fazer o primeiro commit:
 
-![Teste.txt](/assets/images/blog/teste.txt2.png){: .center-image}
+![Teste.txt](/assets/images/blog/teste.txt2.png)
 
 ```sh
 git add teste.txt
 ```
 
-![Teste.txt](/assets/images/blog/teste.txt3.png){: .center-image}
+![Teste.txt](/assets/images/blog/teste.txt3.png)
 
 ```sh
 git commit -m 'Adiciona o arquivo teste.txt'
 ```
 
-![Teste.txt](/assets/images/blog/teste.txt5.png){: .center-image}
+![Teste.txt](/assets/images/blog/teste.txt5.png)
 
 Agora, se alterarmos este arquivo, adicionando conteúdo antes e depois do conteúdo atual, teremos dois pedaços (_hunk_) de alteração, um antes do conteúdo antigo e outro depois:
 
-![Teste.txt](/assets/images/blog/teste.txt7.png){: .center-image}
-![Teste.txt](/assets/images/blog/teste.txt8.png){: .center-image}
+![Teste.txt](/assets/images/blog/teste.txt7.png)
+![Teste.txt](/assets/images/blog/teste.txt8.png)
 
 Se o próximo comando for `git add .` ou `git add teste.txt` os dois _hunks_ serão adicionados, já que estão no mesmo arquivo.
 Porém existe uma forma de adicionar um ou mais _hunks_ seletivamente. É para isso que serve a flag `--patch` ou, resumidamente `-p`. De acordo com o manual (`man git-add`):
-![Teste.txt](/assets/images/blog/teste.txt10.png){: .center-image}
+![Teste.txt](/assets/images/blog/teste.txt10.png)
 Então, se rodarmos o comando `git add -p`, nós vamos ter algumas opções para trabalhar com os pedaços de alteração:
 
-![Teste.txt](/assets/images/blog/teste.txt9.png){: .center-image}
+![Teste.txt](/assets/images/blog/teste.txt9.png)
