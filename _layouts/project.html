@@ -36,7 +36,8 @@ layout: default
       {%- endif -%}
     </div>
   </header>
-  <div class="post-content">{{ content }}</div>
+  <!-- <div class="post-content">{{ content }}</div> -->
+  <iframe src="https://github.com/{{page.project_repo}}/blob/master/README.md" onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
   <script
     src="https://utteranc.es/client.js"
     repo="{{page.project_repo}}"
