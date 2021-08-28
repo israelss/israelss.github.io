@@ -229,6 +229,12 @@ pre {
   position: absolute;
   left: 0;
   right: 0;
+  @include media-query($on-laptop) {
+    height: 2.2em;
+    position: static;
+    float: left;
+    margin-right: 0.5em;
+  }
 }
 
 
