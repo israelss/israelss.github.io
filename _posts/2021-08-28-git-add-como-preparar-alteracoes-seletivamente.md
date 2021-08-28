@@ -3,7 +3,7 @@ layout: post
 title: Git add - Como preparar alterações seletivamente
 categories: git git-add git-commit patch git-log
 author: Israel Sant'Anna
-date: 2021-08-28 12:00:00 -0300
+date: 2021-08-28 15:00:00 -0300
 ---
 
 Quando começamos a aprender sobre como usar o Git, aprendemos que o fluxo básico de trabalho, superficialmente falando, é:
