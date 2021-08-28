@@ -18,6 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
+lang: 'pt-br'
 title: Israel Sant'Anna
 email: israel.santanna@gmail.com
 description: | # this means to keep newlines until "baseurl:"
@@ -95,3 +96,7 @@ kramdown:
 # Dev options
 livereload: true
 open_url: true
+
+
+sass:
+  style: compressed
