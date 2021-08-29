@@ -26,7 +26,7 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  min-width: 450px;
+  min-width: 300px;
 }
 
 
@@ -184,8 +184,6 @@ pre {
   padding-right: $spacing-unit;
   padding-left: $spacing-unit;
   @extend %clearfix;
-  display: flex;
-  justify-content: space-between;
 
   @include media-query($on-laptop) {
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
@@ -228,15 +226,8 @@ pre {
 }
 
 .logo {
-  height: 2.5em;
-  @include media-query($on-laptop) {
-    height: 2.2em;
-    margin: 0.5em 0.5em 0.5em 0;
-flex:auto;
-  }
-  @include media-query($on-palm) {
-    flex:none;
-  }
+  height: 2.2em;
+  margin: 0.5em 0.5em 0.5em 0;
 }
 
 

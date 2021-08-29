@@ -12,21 +12,22 @@
   background-color: $background-color;
 }
 
+.site-header .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 .site-title {
   @include relative-font-size(1.625);
   font-weight: 300;
   line-height: $base-line-height * $base-font-size * 2.25;
   letter-spacing: -1px;
   margin-bottom: 0;
+  flex:auto;
 
   &,
   &:visited {
     color: $grey-color-dark;
-  }
-
-  @include media-query($on-palm) {
-    order: 2;
-    flex:auto;
   }
 }
 
@@ -240,6 +241,7 @@
 }
 
 .post-title {
+  font-family: "Urbanist", $base-font-family;
   @include relative-font-size(2.625);
   letter-spacing: -1px;
   line-height: 1;
