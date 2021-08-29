@@ -226,7 +226,8 @@ pre {
 }
 
 .logo {
-  height: 2.2em;
+  height: $spacing-unit;
+  width: $spacing-unit;
   margin: 0.5em 0.5em 0.5em 0;
 }
 
