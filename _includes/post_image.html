@@ -1,0 +1,9 @@
+<figure class="post-figure">
+    <picture class="post-picture">
+        <source srcset="/assets/images/blog/webp/{{ include.img }}.webp" type="image/webp">
+        <img src="/assets/images/blog/png/{{ include.img }}.png" type="image/png" alt="{{ include.alt }}">
+    </picture>
+    {% if include.caption %}
+        <figcaption class="post-figure-caption">{{ include.caption }}</figcaption>
+    {% endif %}
+</figure>
