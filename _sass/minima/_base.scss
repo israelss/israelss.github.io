@@ -163,10 +163,8 @@ code {
   border-radius: 3px;
   background-color: $code-background-color;
   color: $code-color;
-}
-
-code {
-  padding: 1.5px 5px;
+  padding: 1.5px 4px;
+  white-space: nowrap;
 }
 
 .prompt {
