@@ -325,26 +325,26 @@
   margin-bottom: $spacing-unit;
 
   h2 {
-    @include relative-font-size(2);
+    @include fluid-type($min-content-width, $content-width, $base-font-size* 1.4, $base-font-size);
 
     @include media-query($on-laptop) {
-      @include relative-font-size(1.75);
+      @include fluid-type($min-content-width, $content-width, $base-font-size* 1.3, $base-font-size * 1.75);
     }
   }
 
   h3 {
-    @include relative-font-size(1.625);
+    @include fluid-type($min-content-width, $content-width, $base-font-size * 1.2, $base-font-size * 1.625);
 
     @include media-query($on-laptop) {
-      @include relative-font-size(1.375);
+      @include fluid-type($min-content-width, $content-width, $base-font-size * 1.1, $base-font-size * 1.375);
     }
   }
 
   h4 {
-    @include relative-font-size(1.25);
+    @include fluid-type($min-content-width, $content-width, $base-font-size* 1.05, $base-font-size * 1.25);
 
     @include media-query($on-laptop) {
-      @include relative-font-size(1.125);
+      @include fluid-type($min-content-width, $content-width, $base-font-size* 1.025, $base-font-size * 1.125);
     }
   }
 }
