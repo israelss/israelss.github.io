@@ -210,10 +210,11 @@
 
   .footer-col-3 {
     width: 100%;
+    padding: 0;
   }
 }
 
-@include media-query(440px) {
+@include media-query(460px) {
   .footer-col-1 {
     align-self: flex-end;
   }
@@ -228,7 +229,7 @@
   }
 }
 
-@include media-query(350px) {
+@include media-query(400px) {
   .footer-heading,
   .footer-col-1 {
     text-align: center;
