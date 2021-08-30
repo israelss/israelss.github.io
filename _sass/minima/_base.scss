@@ -177,6 +177,7 @@ code {
   box-shadow: 0 0 $spacing-unit/3 $grey-color-dark;
   border-radius: $spacing-unit/3;
   padding: $spacing-unit/3;
+  @include fluid-type($min-content-width, $content-width, $min-font-size, $base-font-size);
 }
 
 .prompt::before {
