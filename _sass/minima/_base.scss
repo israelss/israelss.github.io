@@ -238,17 +238,6 @@ pre {
   }
 }
 
-.logo {
-  height: $spacing-unit;
-  width: $spacing-unit;
-  margin: 0.5em 0.5em 0.5em 0;
-  background-color: $brand-color-saturated;
-  padding: calc(#{$spacing-unit} * 0.075);
-  border-radius: 50%;
-  box-shadow: 0 0 $spacing-unit/3 $grey-color-dark;
-}
-
-
 /**
  * Tables
  */

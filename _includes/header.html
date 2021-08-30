@@ -3,7 +3,12 @@
   <div class="wrapper">    
     {%- include logo.html -%}
     
-    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">
+      {%- assign title_fields = site.title | split: " " -%}
+      {%- for field in title_fields -%}
+        <div>{{ field | escape }}</div>
+      {%- endfor -%}
+    </a>
     
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
