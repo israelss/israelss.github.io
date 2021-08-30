@@ -22,15 +22,12 @@ Vamos para um exemplo:
 
 Primeiro vamos iniciar um repositório local (para este artigo não vamos precisar de um repositóio remoto):
 
-```sh
-git init
-```
+<code class="prompt">git init</code>
 
 Agora, criamos um arquivo chamado `teste.txt` e adicionamos algum conteúdo ao mesmo:
 
-```sh
-echo "Uma frase qualquer" > teste.txt
-```
+<code class="prompt">echo "Uma frase qualquer" > teste.txt</code>
+
 {% include post_image.html
   img="2021-08-28-git-add-1"
   alt="comando: bat teste.txt"
@@ -43,18 +40,18 @@ Já temos uma modificação, então vamos adicioná-la e fazer o primeiro commit
   alt="comando: git status"
 %}
 
-```sh
+<code class="prompt">
 git add teste.txt
-```
+</code>
 
 {% include post_image.html
   img="2021-08-28-git-add-3"
   alt="comando: git status"
 %}
 
-```sh
+<code class="prompt">
 git commit -m 'Adiciona o arquivo teste.txt'
-```
+</code>
 
 {% include post_image.html
   img="2021-08-28-git-add-4"

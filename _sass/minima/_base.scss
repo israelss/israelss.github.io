@@ -27,6 +27,7 @@ body {
   min-height: 100vh;
   flex-direction: column;
   min-width: 300px;
+  margin-top: $spacing-unit*2;
 }
 
 
@@ -108,10 +109,6 @@ a {
   color: $brand-color;
   text-decoration: none;
 
-  &:visited {
-    color: darken($brand-color, 15%);
-  }
-
   &:hover {
     color: $text-color;
     text-decoration: underline;
@@ -126,6 +123,9 @@ a {
   }
 }
 
+.external-link::after {
+  content: "\279A";
+}
 
 /**
  * Blockquotes
@@ -148,16 +148,40 @@ blockquote {
 /**
  * Code formatting
  */
-pre,
-code {
-  @include relative-font-size(0.9375);
-  border: 1px solid $grey-color-light;
+
+pre {
+  font-family: $code-font-family;
+  font-size: 0.9375em;
+  border: 1px solid $brand-color-light;
   border-radius: 3px;
-  background-color: #eef;
+  background-color: $code-background-color;
 }
 
 code {
-  padding: 1px 5px;
+  @include relative-font-size(0.9375);
+  border: 1px solid $code-background-color;
+  border-radius: 3px;
+  background-color: $code-background-color;
+  color: $code-color;
+}
+
+code {
+  padding: 1.5px 5px;
+}
+
+.prompt {
+  padding: 10px;
+  background-color: $background-color;
+  color: $text-color;
+  border-color: $brand-color;
+  box-shadow: 0 0 $spacing-unit/3 $grey-color-dark;
+  border-radius: $spacing-unit/3;
+  padding: $spacing-unit/3;
+}
+
+.prompt::before {
+  content: '$';
+  padding-right: 5px;
 }
 
 pre {
@@ -168,6 +192,8 @@ pre {
     border: 0;
     padding-right: 0;
     padding-left: 0;
+    background-color: inherit;
+    font-size: 14px;
   }
 }
 
@@ -183,7 +209,6 @@ pre {
   margin-left: auto;
   padding-right: $spacing-unit;
   padding-left: $spacing-unit;
-  @extend %clearfix;
 
   @include media-query($on-laptop) {
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
@@ -192,18 +217,6 @@ pre {
     padding-left: $spacing-unit / 2;
   }
 }
-
-
-
-/**
- * Clearfix
- */
-%clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 
 
 /**
@@ -229,6 +242,10 @@ pre {
   height: $spacing-unit;
   width: $spacing-unit;
   margin: 0.5em 0.5em 0.5em 0;
+  background-color: $brand-color-saturated;
+  padding: calc(#{$spacing-unit} * 0.075);
+  border-radius: 50%;
+  box-shadow: 0 0 $spacing-unit/3 $grey-color-dark;
 }
 
 
@@ -240,22 +257,17 @@ table {
   width: 100%;
   text-align: $table-text-align;
   color: lighten($text-color, 18%);
+  background-color: darken($brand-color, 55%);
   border-collapse: collapse;
-  border: 1px solid $grey-color-light;
   tr {
     &:nth-child(even) {
-      background-color: lighten($grey-color-light, 6%);
+      background-color: darken($brand-color, 50%);
     }
   }
   th, td {
     padding: ($spacing-unit / 3) ($spacing-unit / 2);
   }
   th {
-    background-color: lighten($grey-color-light, 3%);
-    border: 1px solid darken($grey-color-light, 4%);
-    border-bottom-color: darken($grey-color-light, 12%);
-  }
-  td {
-    border: 1px solid $grey-color-light;
+    background-color: darken($brand-color, 30%);
   }
 }
