@@ -12,6 +12,7 @@
   max-width: $content-width;
   width: 100%;
   margin: 0 auto;
+  z-index: 2;
 }
 
 .site-header .wrapper {
@@ -166,7 +167,7 @@
 .footer-col-wrapper {
   @include relative-font-size(0.9375);
   color: $grey-color;
-  margin-left: -$spacing-unit / 2;
+  margin: 0 -$spacing-unit / 2;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -250,6 +251,10 @@
 .page-content {
   padding: $spacing-unit 0;
   flex: 1;
+}
+
+.page-content  p {
+  text-align: justify;
 }
 
 .page-heading {
