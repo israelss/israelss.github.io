@@ -63,6 +63,7 @@
 }
 
 .site-nav {
+  margin: 0.5em 0 0.5em 0.5em;
   .nav-trigger {
     display: none;
   }
@@ -86,6 +87,7 @@
   }
 
   @include media-query($on-palm) {
+    
     background-color: $background-color;
     border: 1px solid $grey-color-light;
     border-radius: 5px;
@@ -120,8 +122,15 @@
     }
 
     input:checked ~ .trigger {
-      display: block;
-      padding-bottom: 5px;
+      display: flex;
+      margin-bottom: $spacing-unit/10;
+      position: absolute;
+      bottom: -$spacing-unit;
+      left: 0;
+      justify-content: center;
+      background-color: $grey-color-dark;
+      max-width: $content-width;
+      width: 100%;
     }
 
     .page-link {
@@ -131,7 +140,6 @@
       &:not(:last-child) {
         margin-right: 0;
       }
-      margin-left: 20px;
     }
   }
 }
