@@ -1,0 +1,5 @@
+<!-- https://jekyllcodex.org/without-plugin/reading-time-indicator/# -->
+
+{% capture words %} {{ content | number_of_words | minus: 180 }} {% endcapture
+%} {% unless words contains '-' %} &#9202; {{ words | plus: 180 | divided_by:
+180 | append: ' minutos' }} {% endunless %}
