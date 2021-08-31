@@ -30,7 +30,7 @@ Create and use [Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/We
 
 ## How to install and use
 
-```
+```bash
 yarn add simple-web-worker
 
 // or
@@ -56,7 +56,9 @@ Obviously, you don't have to call it `SWorker`. You are free to use the name you
 > - _[args]_ is an optional array of arguments that will be used by _func_
 
 > This method creates a disposable web worker, runs and returns the result of given function and closes the worker.
-> <br> > <br>This method works like Promise.resolve(), but in another thread.
+
+
+This method works like <code>Promise.resolve()</code>, but in another thread.
 
 E.g.:
 
@@ -80,7 +82,8 @@ SWorker.run(
 > - _[actions]_ is an optional array of objects with two fields, `message` and `func`. Essentially, it is a messages-actions map.
 
 > If _[actions]_ is omitted or `undefined`, the created **<worker\>** will have no registered actions, so you'll have to use the method `register` before you can use the **<worker\>**.
-> <br> > <br>If you plan to reuse a **<worker\>**, you should use this method. It creates a reusable **<worker\>** (not a real Web Worker, more on this ahead) with determined actions to be runned through its `postMessage()` or `postAll()` methods.
+
+If you plan to reuse a **<worker\>**, you should use this method. It creates a reusable **<worker\>** (not a real Web Worker, more on this ahead) with determined actions to be runned through its `postMessage()` or `postAll()` methods.
 
 E.g.:
 
@@ -104,8 +107,10 @@ let worker = SWorker.create(actions);
 > - _[args]_ is an optional array of arguments that will be used by the function registered with _message_
 
 > When the function does not expect any arguments or the expected arguments have default values, _[args]_ can be omitted safely.
-> <br> > <br>When the expected arguments do not have default values, _[args]_ should be provided.
-> <br> > <br>This method works like Promise.resolve(), but in another thread.
+
+When the expected arguments do not have default values, _[args]_ should be provided.
+
+This method works like <code>Promise.resolve()</code>, but in another thread.
 
 E.g.:
 
@@ -161,10 +166,14 @@ worker
 >   - _[args1],..._ - arrays of arguments to be used by the registered actions.
 
 > If _[message1,...]_ is `undefined` or no argument is given, **<worker\>** will run all registered actions without arguments.
-> <br> > <br>If _[{message: message1, args: [args1]},...]_ or _[[args1],...]_ is used, you should use `[]` (an empty array) as _[args]_ for the functions that does not expect arguments, or if the respective argument of your function has a default value and you want it to be used. If you use `[null]` this will be the value assumed by function argument.
-> <br> > <br>When using _[[args1],...]_, you MUST input the same number of arguments as registered actions, even if some action doesn't accept any arguments! In that case use a `[]`, as stated above. See examples below.
-> <br> > <br>If _[{message: message1, args: [args1]},...]_ is used, every object must contain the fields `message` and `args`.
-> <br>This method works like Promise.all(), but in another thread.
+
+If _[{message: message1, args: [args1]},...]_ or _[[args1],...]_ is used, you should use `[]` (an empty array) as _[args]_ for the functions that does not expect arguments, or if the respective argument of your function has a default value and you want it to be used. If you use `[null]` this will be the value assumed by function argument.
+
+When using _[[args1],...]_, you MUST input the same number of arguments as registered actions, even if some action doesn't accept any arguments! In that case use a `[]`, as stated above. See examples below.
+
+If _[{message: message1, args: [args1]},...]_ is used, every object must contain the fields `message` and `args`.
+
+This method works like Promise.all(), but in another thread.
 
 E.g.:
 
