@@ -9,25 +9,27 @@
 :root{
   --base-font-family: 'Work Sans', 'Urbanist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   --code-font-family: 'Menlo', 'Inconsolata', 'Consolas', 'Roboto Mono', 'Ubuntu Mono', 'Liberation Mono', 'Courier New', monospace;
-  --base-font-weight: 400;
-  --heading-font-weight: 600;
+  --base-font-weight: 300;
+  --heading-font-weight: 500;
   
   // https://www.aleksandrhovhannisyan.com/blog/respecting-font-size-preferences-rems-62-5-percent/
   /* 10px if browser is set to 16px */
   font-size: 62.5%;
 }
 
-html {
-  --fs-h1: 3.247rem;
-  --fs-h2: 2.887rem;
-  --fs-h3: 2.566rem;
-  --fs-h4: 2.281rem;
-  --fs-h5: 2.027rem;
-  --fs-h6: 1.802rem;
+html {  
+  --fs-h1: 4.11rem;
+  --fs-h2: 3.653rem;
+  --fs-h3: 3.247rem;
+  --fs-h4: 2.887rem;
+  --fs-h5: 2.566rem;
+  --fs-h6: 2.281rem;
+  --fs-xlg: 2.027rem;
+  --fs-lg: 1.802rem;
   --fs-body: 1.602rem;
-  --fs-lg: 1.424rem;
-  --fs-md-lg: 1.266rem;
-  --fs-md: 1.125rem;
+  --fs-md-lg: 1.424rem;
+  --fs-md: 1.266rem;
+  --fs-md-sm: 1.125rem;
   --fs-base: 1rem;
   --fs-sm: 0.889rem;
   --fs-xsm: 0.79rem;
@@ -38,32 +40,32 @@ h1 { @include font-size('h1', 'h2'); }
 
 h2,
 .site-title,
-.post-list-heading { @include font-size('h2', 'h3'); }
+.post-list-heading { @include font-size('h2', 'h4'); }
 
-h3 { @include font-size('h3', 'h6'); }
+h3 { @include font-size('h3', 'h5'); }
 
 h4,
-.post-link { @include font-size('h4', 'h5'); }
+.post-link { @include font-size('h4', 'h6'); }
 
-h5 { @include font-size('h5', 'h6'); }
+h5 { @include font-size('h5', 'xlg'); }
 
 h6,
-.footer-heading { @include font-size('h6', 'body'); }
+.footer-heading { @include font-size('h6', 'lg'); }
 
 .post-meta { @include font-size('lg', 'md-lg'); }
 
 small,
 code,
-.footer-col-wrapper { @include font-size('md-lg', 'md'); }
+.footer-col-wrapper { @include font-size('md-lg', 'md-sm'); }
 
-figcaption { @include font-size('sm', 'xsm'); }
+figcaption { @include font-size('sm', 'xxsm'); }
 
 .site-title { font-weight: 300; }
 
 .post-title { font-family: "Urbanist", var(--base-font-family); }
 
 body {
-  @include font-size('body', 'lg');
+  @include font-size('body', 'md-lg');
   font-family: var(--base-font-family);
   font-weight: var(--base-font-weight);
 }
@@ -71,26 +73,26 @@ body {
 h1, h2, h3, h4, h5, h6 { font-weight: var(--heading-font-weight); }
 
 blockquote {
-  @include font-size('body', 'lg');
+  @include font-size('body', 'md-lg');
   &.info {
-    @include font-size('lg', 'md-lg');
+    @include font-size('md-lg', 'md');
     &::before {
-      @include font-size('h1', 'h2');
+      @include font-size('h1', 'h3');
     }
   }
 }
 
 pre {
   font-family: var(--code-font-family);
-  @include font-size('base', 'sm');
+  @include font-size('body', 'md');
   & > code {
-    @include font-size('lg', 'md-lg')
+    @include font-size('body', 'md')
   }
 }
 
-code.prompt { @include font-size('body','sm'); }
+code.prompt { @include font-size('body','base'); }
 
 .post-figure {
-  @include font-size('sm', 'xsm');
+  @include font-size('sm', 'xxsm');
   font-style: italic;
 }
