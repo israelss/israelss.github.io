@@ -62,7 +62,7 @@ blockquote {
       position: absolute;
       display: grid;
       place-items: center;
-      left: -var(--spacing-unit);
+      left: calc(var(--spacing-unit) * -1);
       top: 0.1rem;
       height: 100%;
       width: var(--spacing-unit);
