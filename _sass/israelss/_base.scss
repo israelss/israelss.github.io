@@ -45,8 +45,7 @@ a {
 }
 
 blockquote {
-  color: var(--grey-color);
-  border-left: 4px solid var(--grey-color-light);
+  border-left: 4px solid var(--grey-color);
   padding-left: calc(var(--spacing-unit) / 2);
   padding-right: calc(var(--spacing-unit) / 2);
   background-image: var(--bq-bg-gradient);
