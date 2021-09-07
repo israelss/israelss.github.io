@@ -38,8 +38,8 @@
 
   --bq-bg-gradient: linear-gradient(210deg, var(--table-bg-color-2), var(--bg-color));
 
-  --bg-color: hsl(0, 0%, 15%);
-  --fg-color: hsl(var(--base-hue), 5%, 88%);
+  --bg-color: hsl(25, 5%, 10%);
+  --fg-color: var(--grey-color-very-light);
   --link-color: hsl(var(--base-hue), 100%, 42%);
 }
 
