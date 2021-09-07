@@ -1,0 +1,34 @@
+.site-footer {
+  border-top: 1px solid var(--grey-color-light);
+  padding: calc(var(--spacing-unit) / 2) 0;
+  text-align: center;
+  max-width: var(--content-width);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.contact-list,
+.social-media-list {
+  list-style: none;
+  margin-left: 0;
+}
+
+.footer-col-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  color: var(--grey-color);
+  margin: 0 calc(-#{var(--spacing-unit)} / 2);
+  & > * {
+    flex: 1 1 15em;
+    align-self: center;
+  }
+}
+
+.social-media-list {
+  display: flex;
+  justify-content: center;
+  & > * {
+    flex: 0 1 5em;
+    padding: 0 1em;
+  }
+}

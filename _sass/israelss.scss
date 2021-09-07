@@ -1,0 +1,10 @@
+// Define defaults for each variable.
+:root {
+  // Width of the content area
+  --content-width: 80ch;
+  --min-content-width: 35ch;
+  --spacing-unit: 40px;
+}
+
+// Import partials.
+@import 'israelss/mixins', 'israelss/base', 'israelss/layout', 'israelss/typography', 'israelss/colors', 'israelss/syntax-highlighting';

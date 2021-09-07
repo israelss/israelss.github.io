@@ -1,0 +1,29 @@
+@mixin back-shadow() {
+  box-shadow: 0 0 calc(var(--spacing-unit) / 3) var(--grey-color-dark);
+  border-radius: calc(var(--spacing-unit) / 3);
+  padding: calc(var(--spacing-unit) / 3);
+}
+
+// https://royalfig.github.io/fluid-typography-calculator/
+// https://github.com/royalfig/fluid-typography-calculator/blob/master/index.js
+@mixin font-size($max, $min) {
+  --maxVW: var(--content-width);
+  --minVW: var(--min-content-width);
+  --maxFS: var(--fs-#{$max});
+  --minFS: var(--fs-#{$min});
+  --deltaVW: (var(--maxVW) - var(--minVW));
+  --deltaFS: (var(--maxFS) - var(--minFS));
+  // Why the folllowing doesn't work???
+  // --factor: var(--deltaVW) * var(--deltaFS);
+  // Calculated using the values:
+  // (796,932px - 348,658px) * (3,247rem - 2,887rem)
+  --factor: 161.37864;
+  --minVwFactored: (var(--minVW) / var(--factor));
+  --calcRem: var(--minFS) - var(--minVwFactored);
+  --calcVw: 100vw / var(--factor);
+  --calc: calc(var(--calcRem) + var(--calcVw));
+
+  font-size: var(--minFS);
+  font-size: clamp(var(--minFS), var(--calc), var(--maxFS));
+  line-height: calc(1rem + 2ex);
+}

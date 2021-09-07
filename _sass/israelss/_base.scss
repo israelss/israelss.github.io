@@ -1,0 +1,141 @@
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--fg-color);
+  background-color: var(--bg-color);
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  min-width: var(--min-content-width);
+  margin-top: var(--spacing-unit);
+}
+
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm { margin-bottom: calc(var(--spacing-unit) / 2); }
+
+// Default value of `display` of `main` element is 'inline' in IE 11.
+main { display: block; }
+
+img {
+  max-width: 100%;
+  margin: 0.5em auto;
+  display: block;
+}
+
+ul, ol { margin-left: var(--spacing-unit); }
+
+a {
+  color: var(--brand-color-dark);
+  text-decoration: none;
+  &:hover {
+    color: var(--fg-color);
+    text-decoration: underline;
+  }
+  .social-media-list &:hover {
+    text-decoration: none;
+    .username { text-decoration: underline; }
+  }
+}
+
+blockquote {
+  color: var(--grey-color);
+  border-left: 4px solid var(--grey-color-light);
+  padding-left: calc(var(--spacing-unit) / 2);
+  & > :last-child { margin-bottom: 0; }
+  &.info {
+    border: 1px solid var(--brand-color-dark);
+    border-left: var(--spacing-unit) solid var(--brand-color-dark);
+    border-radius: 1em;
+    padding: 1ch;
+    position: relative;
+    background-color: var(--info-color);
+    color: var(--info-text-color);
+    &::before {
+      content: '\24D8';
+      position: absolute;
+      display: grid;
+      place-items: center;
+      left: -var(--spacing-unit);
+      top: 0.1rem;
+      height: 100%;
+      width: var(--spacing-unit);
+      color: var(--bg-color);
+    }
+  }
+}
+
+pre {
+  border: 1px solid var(--brand-color-light);
+  border-radius: 3px;
+  background-color: var(--code-background-color);
+  padding: 8px 12px;
+  overflow-x: auto;
+  & > code {
+    color: var(--code-color);
+    border: 0;
+    padding-right: 0;
+    padding-left: 0;
+    background-color: inherit;
+  }
+}
+
+code {
+  border: 1px solid var(--code-background-color);
+  border-radius: 3px;
+  background-color: var(--code-background-color);
+  color: var(--code-color);
+  padding: 1.5px 4px;
+  white-space: nowrap;
+}
+
+.prompt {
+  background-color: var(--bg-color);
+  color: var(--fg-color);
+  border-color: var(--brand-color-dark);
+  @include back-shadow();
+  &::before {
+    content: '$';
+    padding-right: 1ex;
+  }
+}
+
+.wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: -webkit-calc(var(--content-width) - var(--spacing-unit));
+  max-width:         calc(var(--content-width) - var(--spacing-unit));
+  padding-right: calc(var(--spacing-unit) / 2);
+  padding-left: calc(var(--spacing-unit) / 2);
+}
+
+.svg-icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    display: inline-block;
+    fill: #{var(--brand-color)};
+    vertical-align: middle;
+}
+
+.external-link::after { content: "\219D"; }
+
+table {
+  margin-bottom: var(--spacing-unit);
+  width: 100%;
+  color: var(--table-text-color);
+  background-color: var(--table-bg-color-1);
+  border-collapse: collapse;
+  tr:nth-child(even) { background-color: var(--table-bg-color-2); }
+  th, td { padding: calc(var(--spacing-unit) / 3) calc(var(--spacing-unit) / 2); }
+  th { background-color: var(--table-th-color); }
+}
+
+table, tr, th, body, header, pre, code, blockquote, nav, a, svg, *::after, *::before {
+  transition: color 500ms ease-out, background-color 500ms ease-out;
+}

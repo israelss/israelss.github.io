@@ -1,0 +1,33 @@
+.site-header {
+  border-bottom: 1px solid var(--grey-color-light);
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-color);
+  max-width: var(--content-width);
+  width: 100%;
+  margin: 0 auto;
+  & .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.site-title {
+  flex: 1 1 45%;
+  align-self: center;
+  text-shadow: 0 0 calc(var(--spacing-unit) / 3) var(--grey-color-dark);
+}
+
+.site-nav {
+  flex: 1 1 45%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .page-link {
+    color: var(--fg-color);
+    &:not(:last-child) { margin-right: 12%; }
+  }
+  .active-page { color: var(--brand-color-dark); }
+}
+
+@import 'israelss/logo';

@@ -93,6 +93,7 @@ Então, se rodarmos o comando `git add -p`, nós vamos ter algumas opções para
 > s - dividir este pedaço em pedaços menores\
 > e - editar manualmente este pedaço\
 > ? - exibir ajuda
+{: class="info"}
 
 Neste caso, o que queremos é dividir os pedaços, para podermos selecionar e preparar apenas uma parte para commitar. Então selecionamos a opção `s`:
 
@@ -111,6 +112,7 @@ Então, temos agora algumas opções diferentes das primeiras, aplicando-se apen
 %}
 
 > Obs: Poderíamos ter usado a opção `q` também, mas como só temos um arquivo com alterações, neste caso o efeito prático é o mesmo.
+{: class="info"}
 
 Para confirmar que há alterações preparadas (_staged_) e alterações não preparadas (_not staged_) no mesmo arquivo, podemos usar o comando `git status`, e para ver quais as alterações não preparadas pordemos usar o comando `git diff`:
 
@@ -135,6 +137,7 @@ Não vamos editar manualmente neste artigo, vamos usar a opção `y`:
 %}
 
 > Obs: Poderíamos ter usado a opção `a` também, mas como só temos uma alteração no arquivo, neste caso o efeito prático é o mesmo.
+{: class="info"}
 
 {% include post_image.html
   img="2021-08-28-git-add-14"

@@ -1,0 +1,67 @@
+:root {
+  --sun-color: hsl(55, 100%, 50%);
+  --moon-color: hsl(240, 24%, 84%);
+  --sky-top: hsl(0, 0%, 0%);
+  --sky-middle: hsl(240, 58%, 16%);
+  --sky-bottom: hsl(240, 11%, 22%);
+  --bars-color: hsl(var(--base-hue), 5%, 88%);
+}
+
+#bars {
+  fill: var(--bars-color);
+}
+
+.mask-circle {
+  fill: none;
+}
+
+.sun {
+  fill: var(--sun-color);
+  filter: url(#naturalGlow);
+}
+.moon {
+  fill: var(--moon-color);
+  filter: url(#naturalGlow);
+}
+
+.sky {
+  fill: url(#skyGradient);
+}
+
+.sky-stop-1 {
+  stop-color: var(--sky-top);
+}
+.sky-stop-2 {
+  stop-color: var(--sky-middle);
+}
+.sky-stop-3 {
+  stop-color: var(--sky-bottom);
+}
+
+[data-theme='light'] {
+  --sky-top: hsl(240, 100%, 83%);
+  --sky-middle: hsl(240, 100%, 80%);
+  --sky-bottom: hsl(240, 100%, 73%);
+  --bars-color: hsl(0, 0%, 93%);
+}
+
+stop { transition: stop-color 780ms; }
+
+/* 
+https://easings.net/pt-br#easeInOutBack
+https://cubic-bezier.com/#.45,-0.47,.03,1.28
+*/
+#day_night_cycle {
+  transform-origin: center center;
+  transition: transform 750ms cubic-bezier(0.45, -0.47, 0.03, 1.28);
+}
+
+.logo {
+  height: var(--spacing-unit);
+  width: var(--spacing-unit);
+  margin: 0.5em 0.5em 0.5em 0;
+  background-color: var(--brand-color-saturated);
+  padding: calc(var(--spacing-unit) * 0.075);
+  border-radius: 50%;
+  box-shadow: 0 0 calc(var(--spacing-unit) / 3) var(--grey-color-dark);
+}

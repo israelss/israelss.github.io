@@ -10,7 +10,7 @@ layout: default
       {%- if page.project_repo -%}
       <div class="post-meta">
         <a
-          target="_blank"
+          target="_blank" class="external-link"
           href="https://github.com/{{ page.project_repo| escape }}"
           ><svg class="svg-icon">
             <use
@@ -28,7 +28,7 @@ layout: default
           {%- for site in featured_list -%} {% assign site_name = site | split:
           "|" | first %} {% assign site_url = site | split: "|" | last %}
           <div class="post-meta">
-            <a target="_blank" href="{{ site_url }}">{{ site_name }}</a>
+            <a target="_blank" class="external-link" href="{{ site_url }}">{{ site_name }}</a>
           </div>
           {%- endfor -%}
         </div>

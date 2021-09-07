@@ -1,0 +1,60 @@
+:root {
+  --base-hue: 146;
+  --brand-color: hsl(var(--base-hue), 69%, 64%);
+  --brand-color-very-light: hsl(var(--base-hue), 69%, 94%);
+  --brand-color-light: hsl(var(--base-hue), 69%, 84%);
+  --brand-color-dark: hsl(var(--base-hue), 69%, 44%);
+  --brand-color-very-dark: hsl(var(--base-hue), 69%, 24%);
+  --brand-color-saturated: hsl(var(--base-hue), 100%, 64%);
+
+  --grey-color: hsl(var(--base-hue), 5%, 62%);
+  --grey-color-very-light: hsl(var(--base-hue), 5%, 92%);
+  --grey-color-light: hsl(var(--base-hue), 5%, 82%);
+  --grey-color-dark: hsl(var(--base-hue), 5%, 42%);
+  --grey-color-very-dark: hsl(var(--base-hue), 5%, 22%);
+
+  --code-color: var(--grey-color-very-dark);
+  --code-background-color: var(--brand-color-very-light);
+
+  --info-color-light: hsl(var(--base-hue), 60%, 70%);
+  --info-color-dark: hsl(var(--base-hue), 30%, 20%);
+  --info-color: var(--info-color-dark);
+  --info-text-color-light: hsl(calc(var(--base-hue) + 90), 50%, 20%);
+  --info-text-color-dark: hsl(calc(var(--base-hue) + 90), 50%, 70%);
+  --info-text-color: var(--info-text-color-dark);
+
+  --table-text-color-dark: hsl(var(--base-hue), 5%, 95%);
+  --table-text-color-light: hsl(var(--base-hue), 10%, 15%);
+  --table-text-color: var(--table-text-color-dark);
+  --table-background-color-1-dark: hsl(var(--base-hue), 69%, 9%);
+  --table-background-color-2-dark: hsl(var(--base-hue), 69%, 14%);
+  --table-background-color-1-light: hsl(var(--base-hue), 69%, 69%);
+  --table-background-color-2-light: hsl(var(--base-hue), 69%, 80%);
+  --table-head-color-dark: hsl(var(--base-hue), 69%, 34%);
+  --table-head-color-light: hsl(var(--base-hue), 39%, 54%);
+  --table-bg-color-1: var(--table-background-color-1-dark);
+  --table-bg-color-2: var(--table-background-color-2-dark);
+  --table-th-color: var(--table-head-color-dark);
+
+  --bg-color: hsl(0, 0%, 15%);
+  --fg-color: hsl(var(--base-hue), 5%, 88%);
+  --link-color: hsl(var(--base-hue), 100%, 42%);
+}
+
+[data-theme='light'] {
+  --bg-color: hsl(120, 5%, 88%);
+  --fg-color: hsl(0, 0%, 15%);
+  --link-color: hsl(139, 99%, 29%);
+  --brand-color: var(--brand-color-dark);
+  --info-color: var(--info-color-light);
+  --info-text-color: var(--info-text-color-light);
+  --code-background-color: var(--grey-color-very-dark);
+  --table-bg-color-1: var(--table-background-color-1-light);
+  --table-bg-color-2: var(--table-background-color-2-light);
+  --table-th-color: var(--table-head-color-light);
+  --table-text-color: var(--table-text-color-light);
+}
+
+[data-theme='light'] :not(pre)>code {
+  --code-color: var(--brand-color-very-light);
+}
