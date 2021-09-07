@@ -1,8 +1,8 @@
 // Define defaults for each variable.
 :root {
   // Width of the content area
-  --content-width: 80ch;
-  --min-content-width: 35ch;
+  --content-width: min(80ch, 900px);
+  --min-content-width: max(35ch, 350px);
   --spacing-unit: 40px;
 }
 
