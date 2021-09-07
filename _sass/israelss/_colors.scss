@@ -36,6 +36,8 @@
   --table-bg-color-2: var(--table-background-color-2-dark);
   --table-th-color: var(--table-head-color-dark);
 
+  --bq-bg-gradient: linear-gradient(210deg, var(--table-bg-color-2), var(--bg-color));
+
   --bg-color: hsl(0, 0%, 15%);
   --fg-color: hsl(var(--base-hue), 5%, 88%);
   --link-color: hsl(var(--base-hue), 100%, 42%);
