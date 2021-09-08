@@ -10,16 +10,41 @@
 .home-highlights {
   display: flex;
   flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-start;
   & > * {
-    flex: 1 1 30rem;
-    padding: 0 1%;
+    padding: 0.7rem 1rem;
+    background-color: var(--bg-accent-color);
+    border-radius: 1rem;
+    flex: 1 1 34rem;
+    > *:last-child {
+      margin-bottom: 0;
+    }
   }
 }
+
+.rss-subscribe { margin-top: calc(var(--spacing-unit) / 3 * -1); }
 
 .post-list {
   margin-left: 0;
   list-style: none;
-  > li { margin-bottom: var(--spacing-unit); }
+  > li {
+    margin-bottom: calc(var(--spacing-unit) / 2);
+    > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+  > *:last-child {
+    margin-bottom: 0;
+  }
+  > *:not(:last-child) {
+    padding-bottom: 0.5rem;
+    border-bottom: 0.5rem solid var(--bg-color);
+  }
+}
+
+.post-list-heading {
+  margin-bottom: calc(var(--spacing-unit) / 4);
 }
 
 .post-meta { color: var(--grey-color); }
