@@ -39,12 +39,14 @@
   --bq-bg-gradient: linear-gradient(210deg, var(--table-bg-color-2), var(--bg-color));
 
   --bg-color: hsl(25, 5%, 10%);
+  --bg-accent-color: hsl(25, 5%, 12%);
   --fg-color: var(--grey-color-very-light);
   --link-color: hsl(var(--base-hue), 100%, 42%);
 }
 
 [data-theme='light'] {
   --bg-color: hsl(120, 5%, 88%);
+  --bg-accent-color: hsl(120, 5%, 86%);
   --fg-color: hsl(0, 0%, 15%);
   --link-color: hsl(139, 99%, 29%);
   --brand-color: var(--brand-color-dark);
