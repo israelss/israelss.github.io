@@ -77,7 +77,7 @@ blockquote {
   &.info {
     @include font-size('md-lg', 'md');
     &::before {
-      @include font-size('h1', 'h3');
+      @include font-size('h3', 'h3');
     }
   }
 }
