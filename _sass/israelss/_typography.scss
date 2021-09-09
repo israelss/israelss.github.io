@@ -90,7 +90,14 @@ pre {
   }
 }
 
-code.prompt { @include font-size('body','base'); }
+code{
+  &.prompt {
+    @include font-size('body','base');
+  }
+  &.code-info {
+    @include font-size('h4', 'body');
+  }
+}
 
 .post-figure {
   @include font-size('sm', 'xxsm');
