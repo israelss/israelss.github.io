@@ -5,12 +5,9 @@ categories: color cor javascript rgb hex converter
 author: Israel Sant'Anna
 date: 2021-09-16 15:00:00 -0300
 ---
-
-#### Formatos de cor
-
 Quando queremos representar uma cor, podemos usar vários formatos. O meu preferido é o HSL, mas muitas vezes precisamos usar RGB ou então HEX. E algumas vezes precisamos converter uma cor de um formato para outro. Neste artigo veremos como é simples converter de RGB para HEX, com um pouquinho de matemática e funções nativas do Javascript.
 
-###### RGB x HEX
+#### RGB x HEX
 Antes de realizar qualquer tipo de conversão, precisamos entender minimamente como cada formato funciona.
 
 As cores em RGB são compostas de três valores no formato `rgb(Red, Green, Blue)`. Cada valor vai de 0 a 255, **na base 10**. Quanto mais próximo de 0, menor a intensidade do canal, quanto mais próximo de 255, maior a intensidade do canal.
