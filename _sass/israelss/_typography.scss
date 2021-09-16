@@ -65,7 +65,7 @@ figcaption { @include font-size('sm', 'xxsm'); }
 .post-title { font-family: "Urbanist", var(--base-font-family); }
 
 body {
-  @include font-size('body', 'md-lg');
+  @include font-size('lg', 'md-lg');
   font-family: var(--base-font-family);
   font-weight: var(--base-font-weight);
 }
