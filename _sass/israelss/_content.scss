@@ -8,8 +8,8 @@
 .page-heading { margin-bottom: var(--spacing-unit); }
 
 .home-highlights {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(calc((var(--min-content-width) / 2) + 15rem), 1fr));
   gap: 1rem;
   align-items: flex-start;
   & > * {
