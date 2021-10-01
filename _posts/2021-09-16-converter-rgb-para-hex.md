@@ -77,4 +77,4 @@ Uma possível implementação, em Javascript, seria:
 
 No próximo artigo vou mostrar uma forma de gerar cores aleatoriamente, se inscreva [via RSS]({{ "/feed.xml" | relative_url }}) para não perder! ;)
 
-Então, sabendo qual a lógica por trás da conversão, como você impmementaria essa função? Deixe nos comentários abaixo!
+Então, sabendo qual a lógica por trás da conversão, como você implementaria essa função? Deixe nos comentários abaixo!

@@ -8,15 +8,13 @@
 .page-heading { margin-bottom: var(--spacing-unit); }
 
 .home-highlights {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(calc((var(--min-content-width) / 2) + 15rem), 1fr));
   gap: 1rem;
   align-items: flex-start;
   & > * {
-    padding: 0.7rem 1rem;
     background-color: var(--bg-accent-color);
     border-radius: 1rem;
-    flex: 1 1 34rem;
     > *:last-child {
       margin-bottom: 0;
     }
