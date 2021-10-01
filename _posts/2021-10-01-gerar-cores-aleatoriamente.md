@@ -3,14 +3,14 @@ layout: post
 title: Como gerar cores aleatoriamente em Javascript
 categories: color cor javascript rgb hex hsl random function
 author: Israel Sant'Anna
-date: 2021-10-01 15:00:00 -0300
+date: 2021-10-01 14:50:00 -0300
 ---
 No último post falei sobre como converter cores de rgb para hexadecimal. E como prometido, neste post vou falar sobre como gerar cores aleatoriamente.
 
 ### Números aleatórios
 Antes de falar sobre cores especificamente, vamos ver como gerar um número aleatoriamente dentro de um intervalo definido.
 
-A função Math.random() gera um número aleatório entre 0 e 1, exclusivamente, ou seja, nunca chega a 1 de fato. Se o intervalo desejado é esse, não é necessário utilizar nenhuma outra função. Para outros intervalos podemos utilizar a seguinte função:
+A função `Math.random()` gera um número aleatório entre 0 e 1, exclusivamente, ou seja, nunca chega a 1 de fato. Se o intervalo desejado é esse, não é necessário utilizar nenhuma outra função. Para outros intervalos podemos utilizar a seguinte função:
 
 {% include post_image.html
   img="2021-10-01-function-getRandomBetween"
@@ -31,7 +31,7 @@ Se o valor mínimo for zero, podemos simplificar para:
 Saber como gerar números aleatórios torna extremamente fácil gerar cores aleatoriamente!
 
 ###### RGB
-Como dito no último post, o formato rgb utiliza 3 valores que vão de 0 a 255. Esse é o intervalo que precisamos utilizar. Então, para cada valor (r, g, b) precisamos gerar uma cor:
+Como dito no último post, o formato rgb utiliza 3 valores que vão de 0 a 255. Esse é o intervalo que precisamos utilizar. Então, para cada valor (`r`, `g`, `b`) precisamos gerar uma cor:
 
 {% include post_image.html
   img="2021-10-01-rgbRandom"
@@ -39,7 +39,7 @@ Como dito no último post, o formato rgb utiliza 3 valores que vão de 0 a 255. 
 %}
 
 ###### HEX
-O formato HEX é composto (em uma das formas mais comuns) de 3 pares de dígitos que vão de 00 a FF (pois os valores são em hexadecimal). Então para cada valor (r, g, b) precisamos, além de gerar a cor, converter para hexadecimal:
+O formato HEX é composto (em uma das formas mais comuns) de 3 pares de dígitos que vão de 00 a FF (pois os valores são em hexadecimal). Então para cada valor (`r`, `g`, `b`) precisamos, além de gerar a cor, converter para hexadecimal:
 
 {% include post_image.html
   img="2021-10-01-hexRandom"
@@ -47,7 +47,7 @@ O formato HEX é composto (em uma das formas mais comuns) de 3 pares de dígitos
 %}
 
 ###### HSL
-O formato HSL (hue, saturation, lightness) utiliza um valor de 0 a 360 para o valor de hue, e um valor de 0% a 100% para saturation e lightness. Então, uma forma de implementar seria:
+O formato HSL (hue, saturation, lightness) utiliza um valor de 0 a 360 para o valor de `hue`, e um valor de 0% a 100% para `saturation` e `lightness`. Então, uma forma de implementar seria:
 
 {% include post_image.html
   img="2021-10-01-hslRandom"
